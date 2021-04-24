@@ -1,4 +1,5 @@
 <resources>
     <string name="app_name">WorkoutApp</string>
     <string name="last_work_out_duration">You spent %1$s on %2$s last time.</string>
+    <string name="workout_time">%1$s</string>
 </resources>

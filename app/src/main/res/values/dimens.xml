@@ -3,4 +3,7 @@
     <dimen name="lastworkout_margin_top">50dp</dimen>
     <dimen name="lastworkout_margin_left">0</dimen>
     <dimen name="lastworkout_margin_right">0dp</dimen>
+    <dimen name="workout_time_margin_left">0dp</dimen>
+    <dimen name="workout_time_margin_right">0dp</dimen>
+    <dimen name="workout_time_margin_top">100dp</dimen>
 </resources>
