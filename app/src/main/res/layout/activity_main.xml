@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
+
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
@@ -6,21 +7,24 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <TextView
+    <androidx.appcompat.widget.AppCompatTextView
         android:id="@+id/lastWorkoutTextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="@dimen/lastworkout_margin_left"
-        android:layout_marginLeft="@dimen/lastworkout_margin_left"
-        android:layout_marginTop="@dimen/lastworkout_margin_top"
-        android:layout_marginEnd="@dimen/lastworkout_margin_right"
-        android:layout_marginRight="@dimen/lastworkout_margin_right"
-        android:text="@string/last_work_out_duration"
+        android:layout_marginStart="@dimen/last_workout_margin_left"
+        android:layout_marginLeft="@dimen/last_workout_margin_left"
+        android:layout_marginTop="@dimen/last_workout_margin_top"
+        android:layout_marginEnd="@dimen/last_workout_margin_right"
+        android:layout_marginRight="@dimen/last_workout_margin_right"
+        android:fontFamily="@font/artifika"
+        android:text="@string/last_workout_duration_default"
+        android:textColor="@color/purple_700"
+        android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <TextView
+    <androidx.appcompat.widget.AppCompatTextView
         android:id="@+id/workoutTimeTextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -29,9 +33,82 @@
         android:layout_marginTop="@dimen/workout_time_margin_top"
         android:layout_marginEnd="@dimen/workout_time_margin_right"
         android:layout_marginRight="@dimen/workout_time_margin_right"
+        android:fontFamily="@font/artifika"
         android:text="@string/workout_time"
+        android:textColor="@color/black"
+        android:textSize="60sp"
+        android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/lastWorkoutTextView" />
+
+    <androidx.appcompat.widget.AppCompatImageButton
+        android:id="@+id/startButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/pause_button_margin_top"
+        android:layout_marginEnd="@dimen/start_button_margin_right"
+        android:layout_marginRight="@dimen/start_button_margin_right"
+        android:background="@color/design_default_color_background"
+        app:layout_constraintEnd_toStartOf="@+id/pauseButton"
+        app:layout_constraintTop_toBottomOf="@+id/lastWorkoutTextView"
+        app:srcCompat="@drawable/play_button"
+        android:onClick="onStart"
+        />
+
+    <androidx.appcompat.widget.AppCompatImageButton
+        android:id="@+id/pauseButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/pause_button_margin_top"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/lastWorkoutTextView"
+        android:background="@color/design_default_color_background"
+        app:srcCompat="@drawable/pause_button"
+        android:onClick="onPause"
+        />
+
+
+   <androidx.appcompat.widget.AppCompatImageButton
+       android:id="@+id/stopButton"
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"
+       android:layout_marginStart="@dimen/stop_button_margin_left"
+       android:layout_marginLeft="@dimen/stop_button_margin_left"
+       android:layout_marginTop="@dimen/pause_button_margin_top"
+       app:layout_constraintStart_toEndOf="@+id/pauseButton"
+       app:layout_constraintTop_toBottomOf="@+id/lastWorkoutTextView"
+       android:background="@color/design_default_color_background"
+       app:srcCompat="@drawable/stop_button"
+       />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/workout_type_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/workout_type_label_margin_top"
+        android:fontFamily="@font/artifika"
+        android:text="@string/workout_type_label_text"
+        android:textColor="@color/purple_700"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@+id/startButton"
+        app:layout_constraintTop_toBottomOf="@+id/pauseButton" />
+
+    <androidx.appcompat.widget.AppCompatEditText
+        android:id="@+id/workout_type_textInput"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/workout_type_textInput_margin_left"
+        android:layout_marginLeft="@dimen/workout_type_textInput_margin_left"
+        android:ems="10"
+        android:fontFamily="@font/artifika"
+        android:hint="@string/workout_type_hint"
+        android:inputType="textAutoComplete"
+        android:textColor="@color/purple_700"
+        android:textSize="14sp"
+        app:layout_constraintBaseline_toBaselineOf="@+id/workout_type_label"
+        app:layout_constraintStart_toEndOf="@+id/workout_type_label" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

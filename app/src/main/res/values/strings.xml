@@ -1,5 +1,8 @@
 <resources>
     <string name="app_name">WorkoutApp</string>
-    <string name="last_work_out_duration">You spent %1$s on %2$s last time.</string>
-    <string name="workout_time">%1$s</string>
+    <string name="last_workout_duration">You spent %1$s on %2$s last time.</string>
+    <string name="last_workout_duration_default">You have not worked out yet. Get started!</string>
+    <string name="workout_time">%1$tR</string>
+    <string name="workout_type_label_text">Enter your workout type:</string>
+    <string name="workout_type_hint">Workout type</string>
 </resources>
